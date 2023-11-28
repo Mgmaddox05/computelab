@@ -1,0 +1,58 @@
+<lab>
+
+    <computer id= "AB">
+        <manufacturer>Dell</manufacturer>
+        <yearbought>2022</yearbought>
+        <processor>i9</processor>
+        <montior mID= "0001">
+            <manufacturer>MSI</manufacturer>
+            <resolution>1920x1080</resolution>
+        </montior>
+        <montior mID= "0002">
+            <manufacturer>MSI</manufacturer>
+            <resolution>1920x1080</resolution>
+        </montior>
+    </computer>
+
+    <computer id= "BC">
+        <manufacturer>Dell</manufacturer>
+        <yearbought>2022</yearbought>
+        <processor>i9</processor>
+        <montior mID= "0003">
+            <manufacturer>MSI</manufacturer>
+            <resolution>1920x1080</resolution>
+        </montior>
+        <montior mID= "0004">
+            <manufacturer>MSI</manufacturer>
+            <resolution>1920x1080</resolution>
+        </montior>
+    </computer>
+
+    <computer id= "CD">
+        <manufacturer>Dell</manufacturer>
+        <yearbought>2022</yearbought>
+        <processor>i9</processor>
+        <montior mID= "0005">
+            <manufacturer>MSI</manufacturer>
+            <resolution>1920x1080</resolution>
+        </montior>
+        <montior mID= "0006">
+            <manufacturer>MSI</manufacturer>
+            <resolution>1920x1080</resolution>
+        </montior>
+    </computer>
+
+    <computer id= "DE">
+        <manufacturer>Dell</manufacturer>
+        <yearbought>2022</yearbought>
+        <processor>i9</processor>
+        <montior mID= "0007">
+            <manufacturer>MSI</manufacturer>
+            <resolution>1920x1080</resolution>
+        </montior>
+        <montior mID= "0008">
+            <manufacturer>MSI</manufacturer>
+            <resolution>1920x1080</resolution>
+        </montior>
+    </computer>
+</lab>
