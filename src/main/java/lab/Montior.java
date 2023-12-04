@@ -10,9 +10,9 @@ public class Montior {
         this.manufacturer = manufacturer;
         this.resolution = resolution;
     }  
-
-    public String ToString()
+    @Override
+    public String toString()
     {
-        return "Manufacturer: " + manufacturer + "Resolution: " + resolution;
+        return "\n\tID: " + mID + " Manufacturer: " + manufacturer + " Resolution: " + resolution;
     }
 }

@@ -7,8 +7,8 @@ import javax.xml.parsers.*;
 import java.io.*;
 
 public class ComputerLab {
-   private ArrayList<Computer> computeList;
-   private ArrayList<Montior> montiorList; 
+   
+    
 
    public ComputerLab()
    {
@@ -27,9 +27,11 @@ public class ComputerLab {
 }
    
 
-   public ArrayList<Montior> MontiorList(Document d1)
+   public ArrayList<Montior> MontiorList(Element cElement)
    {
-        NodeList nList2 = d1.getElementsByTagName("montior");
+        
+        ArrayList<Montior> montiorList = new ArrayList<Montior>();
+        NodeList nList2 = cElement.getElementsByTagName("montior");
                     for( int mID = 0; mID < nList2.getLength(); mID++)
                     {
                         Node mNode = nList2.item(mID);
@@ -51,21 +53,21 @@ public class ComputerLab {
 
    public ArrayList<Computer> Parse(Document d1) throws Exception
    {
-    NodeList nList = d1.getElementsByTagName("computer");
-     Document document = readXMLDocumentFromFile("C:/Users/mm1049079/Desktop/GitHub/computelab/src/main/java/lab/lab.xml");
-    ArrayList<Montior> montiorList = MontiorList(document);
 
+    ArrayList<Computer> computeList = new ArrayList<Computer>();
+    NodeList nList = d1.getElementsByTagName("computer");
         for (int idNUM = 0; idNUM < nList.getLength(); idNUM++) {
             Node node = nList.item(idNUM);
 
             if (node.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement = (Element) node;
+                ArrayList<Montior> montiorList = MontiorList(eElement);
                 String computeID = eElement.getAttribute("id");
                 String manufacturer = eElement.getElementsByTagName("manufacturer").item(0).getTextContent();
                 String yearBought = eElement.getElementsByTagName("yearbought").item(0).getTextContent();
                 String processor = eElement.getElementsByTagName("processor").item(0).getTextContent();
                 
-                Computer compute1 = new Computer(computeID, manufacturer, yearBought, processor, montiorList);
+                Computer compute1 = new Computer(manufacturer, computeID, yearBought, processor, montiorList);
                 computeList.add(compute1);
                 
             }

@@ -17,9 +17,14 @@ public class Computer {
         this.yearBought = yearBought;
         this.montiorList = montiorList;
     }
-
-    public String ToString()
+    @Override
+    public String toString()
     {
-        return "Manufacturer: " + manufacturer + "ID: " + id + "Processor: " + processer + "Year Bought: " + yearBought;
+        String montiors = "";
+        for(int i = 0; i < montiorList.size(); i++)
+        {
+           montiors += montiorList.get(i).toString();
+        }
+        return "Computer: " + "\n\tManufacturer: " + manufacturer + " ID: " + id + " Processor: " + processer + " Year Bought: " + yearBought + "\n Montiors: " + montiors;
     }
 }

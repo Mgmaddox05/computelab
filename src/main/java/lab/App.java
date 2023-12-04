@@ -17,17 +17,17 @@ public class App
         Document document = readXMLDocumentFromFile("C:/Users/mm1049079/Desktop/GitHub/computelab/src/main/java/lab/lab.xml");
         
         // Make a loop to add each element to computeList
-        ArrayList<Computer> computeList = Parse(document);
-        /*for(int i = 0; i < computeList.size(); i++)
+        ComputerLab lab1 = new ComputerLab();
+
+        ArrayList<Computer> computeList = lab1.Parse(document);
+        for(int i = 0; i < computeList.size(); i++)
         {
             System.out.println(computeList.get(i));
-        }*/
+        }
         System.out.println(computeList.size());
     }
 
-    private static ArrayList<Computer> Parse(Document document) {
-        return null;
-    }
+    
 
     public static Document readXMLDocumentFromFile(String fileNameWithPath) throws Exception {
 
